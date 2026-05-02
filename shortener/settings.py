@@ -75,14 +75,16 @@ WSGI_APPLICATION = 'shortener.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-if os.getenv("DATABASE_URL"):
+db_url = os.environ.get("DATABASE_URL")
+
+if db_url:
     DATABASES = {
-    'default': dj_database_url.parse(
-        os.environ.get("DATABASE_URL"),
-        conn_max_age=600,
-        ssl_require=True
-    )
-}
+        'default': dj_database_url.parse(
+            db_url,
+            conn_max_age=600,
+            ssl_require=True
+        )
+    }
 else:
     DATABASES = {
         'default': {
@@ -94,7 +96,6 @@ else:
             'PORT': '5432',
         }
     }
-
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
 
