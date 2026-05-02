@@ -11,6 +11,22 @@ It allows users to convert long URLs into short, shareable links.
 
 ---
 
+
+---
+
+
+## 📸 Screenshots
+
+<img width="1365" height="681" alt="url-shortener" src="https://github.com/user-attachments/assets/679348e8-f0f1-44e7-8dac-ddf54a164d0f" />
+
+
+
+
+
+
+
+---
+
 ## 🛠️ Tech Stack
 
 * Backend: Python, Django
